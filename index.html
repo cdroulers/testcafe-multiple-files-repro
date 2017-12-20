@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr-CA">
+
+<head>
+  <meta charset="utf-8">
+  <title>Atlas TeleMed</title>
+</head>
+
+<body>
+  HAI!
+
+  <script>
+    function createLink(content, name) {
+      var blob = new Blob([content], {
+        type: "application/octect-stream"
+      });
+      var url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.innerHTML = name;
+      document.body.appendChild(a);
+      a.href = url;
+      a.download = name;
+    }
+
+    createLink("file1", "file1.txt");
+    createLink("file2", "file2.txt");
+    createLink("file3", "file3.txt");
+  </script>
+</body>
+
+</html>

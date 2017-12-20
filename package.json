@@ -1,0 +1,15 @@
+{
+  "name": "repro-testcafe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Christian Droulers <droulers.christian@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "connect": "^3.6.5",
+    "serve-static": "^1.13.1",
+    "testcafe": "^0.18.5"
+  },
+  "scripts": {
+    "testcafe": "testcafe \"chrome\" ./test.js --app \"node server.js\" --app-init-delay 1000 --screenshots ./screenshots --screenshots-on-fails"
+  }
+}
